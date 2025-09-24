@@ -5,7 +5,7 @@
   "description": "App to reduce the resolution of the image ",
   "license": "MIT",
   "author": "Rohit",
-  "type": "module",
+  "type": "commonjs",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
