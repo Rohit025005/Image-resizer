@@ -1,0 +1,19 @@
+{
+  "name": "image-resizer",
+  "productName": "Image resizer",
+  "version": "1.0.0",
+  "description": "App to reduce the resolution of the image ",
+  "license": "MIT",
+  "author": "Rohit",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"electron ."
+  },
+  "devDependencies": {
+    "electron": "^38.1.2",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
