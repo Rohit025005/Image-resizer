@@ -1,6 +1,7 @@
 const os = require('os');
+const fs = require('fs');
 const path = require('path');
-const { contextBridge, ipcRenderer } = require('electron');
+const { contextBridge, ipcRenderer ,webUtils } = require('electron');
 const Toastify = require('toastify-js');
 
 contextBridge.exposeInMainWorld('os', {
@@ -19,4 +20,12 @@ contextBridge.exposeInMainWorld('ipcRenderer', {
 
 contextBridge.exposeInMainWorld('Toastify', {
   toast: (options) => Toastify(options).showToast(),
+});
+
+contextBridge.exposeInMainWorld('fs',{
+  readFileSync : (filePath) => fs.readFileSync(filePath),
+});
+
+contextBridge. exposeInMainWorld("webUtils", {
+getFilePath: (file) => webUtils. getPathForFile(file),
 });

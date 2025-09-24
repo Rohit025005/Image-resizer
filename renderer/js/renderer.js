@@ -50,7 +50,7 @@ function resizeImage(e) {
   }
 
   // Electron adds a bunch of extra properties to the file object including the path
-  const imgPath = img.files[0].path;
+  const imgPath = webUtils. getFilePath(img.files[0]);
   const width = widthInput.value;
   const height = heightInput.value;
 
